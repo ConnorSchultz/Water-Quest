@@ -1,0 +1,35 @@
+﻿using UnityEngine;
+using UnityEngine.UI;
+using System.Collections;
+
+public class toScoreScreen : MonoBehaviour {
+	
+	public Button scoreScreen;
+	Text txt;
+	public int currentscore = 0;
+	// Use this for initialization
+	void Start () {
+		GameObject getScore = GameObject.Find ("Game Manager");
+		saveScore SaveScore = getScore.GetComponent<saveScore> ();
+		currentscore = SaveScore.currentscore;
+
+		scoreScreen = scoreScreen.GetComponent<Button> ();
+		txt = gameObject.GetComponent<Text> ();
+		txt.text = "Score " + ": " + currentscore;
+	}
+
+	public void ToScoreScreen ()
+	{
+		Application.LoadLevel (2);
+	}
+	
+	// Update is called once per frame
+	void Update () {
+		GameObject getScore = GameObject.Find ("Game Manager");
+		saveScore SaveScore = getScore.GetComponent<saveScore> ();
+		currentscore = SaveScore.currentscore;
+
+		txt = gameObject.GetComponent<Text> ();
+		txt.text="Score : " + currentscore;  
+	}
+}

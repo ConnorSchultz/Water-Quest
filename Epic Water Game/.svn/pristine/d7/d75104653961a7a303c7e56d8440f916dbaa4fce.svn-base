@@ -1,0 +1,43 @@
+fileFormatVersion: 2
+guid: 061b0de8edc041d49877ae4f3f7ff521
+timeCreated: 1440821075
+licenseType: Free
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences:
+  - grass: {fileID: 187988, guid: bb70f68da4eb9774f93f00dcaf125ce9, type: 2}
+  - beach: {instanceID: 0}
+  - ocean: {instanceID: 0}
+  - desal: {instanceID: 0}
+  - desalHappiness: {instanceID: 0}
+  - desalEnvironment: {instanceID: 0}
+  - desalCapacity: {instanceID: 0}
+  - road: {instanceID: 0}
+  - road2: {instanceID: 0}
+  - farm: {instanceID: 0}
+  - crops: {instanceID: 0}
+  - house1: {instanceID: 0}
+  - house2: {instanceID: 0}
+  - house3: {instanceID: 0}
+  - tree1: {instanceID: 0}
+  - roadCorner: {instanceID: 0}
+  - roadInterLUD: {instanceID: 0}
+  - roadInterRUD: {instanceID: 0}
+  - roadInterLRU: {instanceID: 0}
+  - researchPlantR: {instanceID: 0}
+  - researchPlantG: {instanceID: 0}
+  - researchPlantB: {instanceID: 0}
+  - corn: {instanceID: 0}
+  - tree2: {instanceID: 0}
+  - crossRoad: {instanceID: 0}
+  - lagoon1: {instanceID: 0}
+  - lagoon2: {instanceID: 0}
+  - lagoon3: {instanceID: 0}
+  - lagoon4: {instanceID: 0}
+  - scientistText: {instanceID: 0}
+  - pollution: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

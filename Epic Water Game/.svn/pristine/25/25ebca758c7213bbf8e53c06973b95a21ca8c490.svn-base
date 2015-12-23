@@ -1,0 +1,46 @@
+﻿#pragma strict
+
+
+								
+var researchFound = 0;
+public var gameManager : GameObject;
+var icon : GameObject;
+var cloneIcon : GameObject;
+gameManager = GameObject.Find("Game Manager");
+var collectSound : AudioClip;
+var iconPos : Vector3;
+var researchType;
+var thisParticle : GameObject;
+function Start () {
+
+
+    iconPos = Vector3(transform.position.x,
+                      transform.position.y + icon.GetComponent(BoxCollider2D).size.y*6,0);
+	cloneIcon = Instantiate(icon,iconPos,Quaternion.identity);
+	
+	cloneIcon.transform.SetParent(transform);
+}
+
+function Update () {
+
+}
+
+function OnMouseDown(){
+	showResearch();
+}
+
+function showResearch(){
+		//if clicked for 1st time then print research fact
+		if(!researchFound && !gameManager.GetComponent(researchScript).researchOpen
+			&& !gameManager.GetComponent(researchScript).closing){
+		gameManager.GetComponent(researchScript).findResearch();
+		researchFound = 1;
+		GetComponent.<AudioSource>().PlayOneShot(collectSound);
+		
+		Instantiate(thisParticle,cloneIcon.transform.position,Quaternion.identity);
+		Destroy(cloneIcon);
+	}
+
+
+
+}

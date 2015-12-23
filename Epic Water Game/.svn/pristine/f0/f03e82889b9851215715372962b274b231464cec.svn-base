@@ -1,0 +1,19 @@
+﻿#pragma strict
+
+
+var gameManager : GameObject;
+function Start () {
+	gameManager = GameObject.Find("Game Manager");
+}
+
+function Update () {
+
+}
+
+public function showResearch(){
+	if(!gameManager.GetComponent(researchScriptC).guiBusy)
+		gameManager.GetComponent(researchScriptC).displayResearch(0,true);
+
+	
+}
+

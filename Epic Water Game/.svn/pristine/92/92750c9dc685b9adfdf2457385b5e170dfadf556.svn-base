@@ -1,0 +1,25 @@
+﻿#pragma strict
+
+var sound : AudioClip;
+function Start () {
+
+}
+
+function Update () {
+
+}
+
+public function playOnce(){
+	GetComponent.<AudioSource>().PlayOneShot(sound);
+	
+	yield WaitForSeconds(5);
+	Destroy(gameObject);
+
+}
+
+public function play(){
+	GetComponent.<AudioSource>().PlayOneShot(sound);
+
+
+
+}

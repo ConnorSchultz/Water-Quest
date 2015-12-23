@@ -1,0 +1,25 @@
+﻿using UnityEngine;
+using UnityEngine.UI;
+using System.Collections;
+
+public class finalScore : MonoBehaviour {
+
+	Text txt;
+	public int currentscore = 0;
+	// Use this for initialization
+	void Start () {
+
+		GameObject getScore = GameObject.Find ("Game Manager");
+		saveScore SaveScore = getScore.GetComponent<saveScore> ();
+		currentscore = SaveScore.currentscore;
+
+		txt = gameObject.GetComponent<Text> ();
+		txt.text = "Your final score is " + currentscore;
+	}
+	
+	// Update is called once per frame
+	void Update () {
+		txt = gameObject.GetComponent<Text> ();
+		txt.text = "Your final score is " + currentscore;
+	}
+}
